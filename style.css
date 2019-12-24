@@ -1,0 +1,121 @@
+.at h1 {
+  margin: 20px auto 60px auto;
+  font-size: 4rem;
+}
+.at h5 {
+  margin-bottom: .75em;
+  font-size: 2.4rem;
+}
+.at .right {
+  padding-left: 15%;
+}
+.at .section {
+  margin-bottom: 2em;
+}
+.at .audio-img, .at .volume-img {
+  background-image: url("/wp-content/uploads/2018/11/color-meter.png");
+  background-position: center;
+  width: 100%;
+  height: 254px;
+  background-size: 150%;
+  background-repeat: no-repeat;
+}
+.at .volume-img {
+  background-image: url("/wp-content/uploads/2018/11/volume-big.jpg");
+}
+.at .btn {
+  border-radius: 0;
+  min-width: 200px;
+  font-size: 18px;
+}
+.at label {
+  font-size: 18px;
+}
+.at .ad {
+  margin-top: 30px;
+}
+.at .log {
+  margin-bottom: 1em;
+}
+.at .log p {
+  margin-bottom: 0;
+}
+.at .i_f {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.at .rb_container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.at .rb_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.at .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.at .rb_container:hover input~.checkmark {
+  background-color: #ccc;
+}
+.at .rb_container input:checked~.checkmark {
+  background-color: #2196F3;
+}
+.at .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.at .rb_container input:checked~.checkmark:after {
+  display: block;
+}
+.at .rb_container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+.at .comp_level, .at .custom {
+  max-width: 300px;
+}
+.at .custom .input-group-text {
+  left: 0;
+  width: 110px;
+}
+.at .custom input {
+  left: 0px;
+  height: 50px;
+  text-align: center;
+}
+.at .custom .unit {
+  margin-left: 10px;
+  width: 91px;
+  line-height: 3.1rem;
+}
+.at .download {
+  margin-bottom: 2em;
+  display: block;
+}
+.at #repeat_link {
+  font-size: 18px;
+}

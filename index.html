@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Audio Compressor</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="assets/css/style.css?v=1.0">
+
+</head>
+
+<body>
+
+	</style>
+	<div id="tool" class="container at">
+	<div class="row">
+		<div class="col-12 col-lg-8 col-md-8 col-sm-12 desc right">
+			<h5>Upload Audio File</h5>
+			<fieldset>
+				<div class="section">
+					<input type="file" id="audio-file" name="audio-file" class="i_f" accept="audio/mpeg, audio/ogg, audio/*" /><label for="audio-file" class="btn btn-outline-primary">Upload</label><script>var inputs=document.querySelectorAll(".i_f");Array.prototype.forEach.call(inputs,function(n){var e=n.nextElementSibling,t=e.innerHTML;n.addEventListener("change",function(n){var r;r=n.target.value.split("\\").pop(),e.innerHTML=r||t})});</script>
+					<div id="upload_err" class="d-none" style="color: red;">Please upload a file.</div>
+				</div>
+				<div class="section comp_level">
+					<h5>Choose Strength</h5>
+					<label class="rb_container">Soft<input type="radio" checked="checked" name="level" id="loud"><span class="checkmark"></span>
+					</label>
+					<label class="rb_container">Medium<input type="radio" name="level" id="louder"><span class="checkmark"></span>
+					</label>
+					<label class="rb_container">Loud<input type="radio" name="level" id="loudest"><span class="checkmark"></span>
+					</label>	
+					<label class="rb_container" id="custom_wrap">Custom<input type="radio" name="level" id="custom"><span class="checkmark"></span>
+					</label>
+				</div>
+				<div class="section d-none" id="custom1">
+					<div class="input-group mb-3 custom">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Threshold</span>
+						</div>
+						<input name="setting" type="text" class="form-control" id="thresh" value="-20" required>
+						<span class="unit">Decibels</span>
+					</div>
+					<div class="input-group mb-3 custom">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Knee</span>
+						</div>
+						<input name="setting" type="text" class="form-control"  id="knee" value="30">
+						<span class="unit">Decibels</span>
+					</div>
+					<div class="input-group mb-3 custom">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Ratio</span>
+						</div>
+						<input name="setting" type="text" class="form-control" id="ratio" value="5" required>
+						<span class="unit">: 1</span>
+					</div>
+					<div class="input-group mb-3 custom">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Attack</span>
+						</div>
+						<input name="setting" type="text" class="form-control" id="attack" value=".050" required>
+						<span class="unit">Seconds</span>
+					</div>
+					<div class="input-group mb-3 custom">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Release</span>
+						</div>
+						<input name="setting" type="text" class="form-control" id="release" value=".250" required>
+						<span class="unit">Seconds</span>
+					</div>
+				</div>
+				<div class="section">
+					<button type="button" id="compress_btn" class="btn btn-outline-primary">Compress</button>
+				</div>
+			</fieldset>
+			<div>
+				<div id="log" class="log"></div>
+				<a href="" id="download_link" class="d-none download"><button type="button" class="btn btn-outline-primary">Download File</button></a>
+				<div id="repeat_link" class="d-none">
+					<a href="https://www.russellgood.com/audio-tools/dynamics-compressor/">Compress Another Track</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <script src="assets/js/lib/jQuery-3.3.1/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
